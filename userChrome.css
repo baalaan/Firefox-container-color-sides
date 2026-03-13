@@ -5,19 +5,19 @@
 }
 
 #tabbrowser-tabs .tab-background {
-    border-right: solid 2px var(--identity-icon-color, #ccc) !important;
-    border-left: solid 2px var(--identity-icon-color, #ccc) !important;
+    border-right: solid 2px var(--identity-icon-color, currentColor) !important;
+    border-left: solid 2px var(--identity-icon-color, currentColor) !important;
     transition: all .15s ease-in-out !important;
 }
 
 #tabbrowser-tabs tab:not([selected="true"]):hover .tab-background {
-    border-right: solid 3px var(--identity-icon-color, #ddd) !important;
-    border-left: solid 3px var(--identity-icon-color, #ddd) !important;
+    border-right: solid 3px var(--identity-icon-color, currentColor) !important;
+    border-left: solid 3px var(--identity-icon-color, currentColor) !important;
 }
 
 #tabbrowser-tabs .tab-background[selected="true"] {
-    border-right: solid 5px var(--identity-icon-color, #fff) !important;
-    border-left: solid 5px var(--identity-icon-color, #fff) !important;
+    border-right: solid 5px var(--identity-icon-color, currentColor) !important;
+    border-left: solid 5px var(--identity-icon-color, currentColor) !important;
 }
 
 /* Hide tab separator lines for a cleaner look */
@@ -30,13 +30,13 @@
 /* Subtle hover highlight on inactive tabs */
 
 #tabbrowser-tabs tab:not([selected="true"]):hover .tab-background {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: color-mix(in srgb, currentColor 5%, transparent) !important;
 }
 
 /* All deselected tabs should have text and favicons with lower visibility */
 
-.tab-label:not([selected="true"]) {
-    color: #ddd !important;
+tab:not([selected="true"]) .tab-label {
+    opacity: 0.6 !important;
 }
 
 tab:not([selected="true"]) .tab-icon-image {

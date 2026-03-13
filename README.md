@@ -6,7 +6,7 @@ The goal of this project is to basically fix small things I didn't really like a
 * The selected tab does not stand out enough from the others
 * The URL bar is a bit cluttered with all buttons displayed
 
-One thing to note is that this theme is for Firefox in dark mode. This probably looks very bad in light mode.
+This theme works with both dark and light Firefox themes.
 
 With that in mind, here are the customizations:
 * The "container color bar" below the tab is moved to the sides of the tab
