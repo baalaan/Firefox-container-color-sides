@@ -41,6 +41,17 @@ git clone https://github.com/baalaan/Firefox-container-color-sides.git chrome
 
 > **Note**: On some Linux distributions (e.g. Linux Mint), the Firefox profile directory may be located at `~/.config/mozilla/firefox/` instead of `~/.mozilla/firefox/`.
 
+### Companion theme (optional)
+
+The `theme/` folder contains **Container Clarity**, a companion Firefox theme that pairs with the CSS tweaks. It provides a muted, minimal color palette with subtle depth so container colors and the selected tab card stand out clearly. It includes both dark and light variants.
+
+To install it:
+1. Open Firefox and go to `about:debugging#/runtime/this-firefox`
+2. Click "Load Temporary Add-on..."
+3. Navigate to the `theme/` folder and select `manifest.json`
+
+> **Note**: Temporary add-ons are removed when Firefox restarts. For a permanent install, you can package and sign the theme via [addons.mozilla.org](https://addons.mozilla.org).
+
 ### How to develop
 There's a [tutorial on Reddit](https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/) on how to edit the Firefox UI like a website using the built-in developer tools.
 
