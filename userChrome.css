@@ -10,15 +10,42 @@
     transition: all .15s ease-in-out !important;
 }
 
+#tabbrowser-tabs tab:not([selected="true"]):hover .tab-background {
+    border-right: solid 3px var(--identity-icon-color, #ddd) !important;
+    border-left: solid 3px var(--identity-icon-color, #ddd) !important;
+}
+
 #tabbrowser-tabs .tab-background[selected="true"] {
     border-right: solid 5px var(--identity-icon-color, #fff) !important;
     border-left: solid 5px var(--identity-icon-color, #fff) !important;
 }
 
-/* All deselected tabs should have text with lower visibility */
+/* Hide tab separator lines for a cleaner look */
+
+#tabbrowser-tabs .tabbrowser-tab::after,
+#tabbrowser-tabs .tabbrowser-tab::before {
+    opacity: 0 !important;
+}
+
+/* Subtle hover highlight on inactive tabs */
+
+#tabbrowser-tabs tab:not([selected="true"]):hover .tab-background {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* All deselected tabs should have text and favicons with lower visibility */
 
 .tab-label:not([selected="true"]) {
     color: #ddd !important;
+}
+
+tab:not([selected="true"]) .tab-icon-image {
+    opacity: 0.7 !important;
+    transition: opacity .15s ease-in-out !important;
+}
+
+tab:not([selected="true"]):hover .tab-icon-image {
+    opacity: 1 !important;
 }
 
 /* Remove the small arrow from the search bar, except when hovered */
@@ -40,7 +67,8 @@
     transition: all .5s ease-in-out;
 }
 
-#urlbar-input-container:hover>#page-action-buttons {
+#urlbar-input-container:hover>#page-action-buttons,
+#urlbar-input-container:focus-within>#page-action-buttons {
     animation: .5s delayedFadeIn ease-in-out;
     opacity: 1;
 }
@@ -69,4 +97,13 @@ tab:not([selected="true"])>stack>hbox>.tab-close-button {
     opacity: 0 !important;
     transform: scale(0) !important;
     transition: .25s all ease-in-out !important;
+}
+
+tab:not([selected="true"]):hover>stack>hbox>.tab-close-button {
+    opacity: 0.7 !important;
+    transform: scale(1) !important;
+}
+
+tab:not([selected="true"]):hover>stack>hbox>.tab-close-button:hover {
+    opacity: 1 !important;
 }
